@@ -67,7 +67,7 @@ Mesaj: ${formData.message}`;
   };
 
   return (
-    <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-b from-transparent via-black/20 to-transparent">
+    <section id="contact" className="relative py-20 md:py-32 pointer-events-auto">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -150,7 +150,7 @@ Mesaj: ${formData.message}`;
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="glass-card p-8"
+            className="glass-card p-8 relative z-50"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -229,7 +229,7 @@ Mesaj: ${formData.message}`;
               <motion.button
                 type="button"
         onClick={() => alert("buton çalıştı")}
-                className="metallic-btn w-full"
+                className="metallic-btn w-full relative z-50"
                 variants={itemVariants}
               >
                 <Send size={20} />
