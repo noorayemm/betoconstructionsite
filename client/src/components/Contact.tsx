@@ -150,7 +150,7 @@ Mesaj: ${formData.message}`;
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="glass-card p-8 relative z-50"
+          className="glass-card p-8 relative z-50 pointer-events-auto"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -228,8 +228,8 @@ Mesaj: ${formData.message}`;
               {/* Submit Button */}
               <motion.button
                 type="button"
-        onClick={() => alert("buton çalıştı")}
-                className="metallic-btn w-full relative z-50"
+        onClick={() => alert(" çalıştı")}
+                className="metallic-btn w-full relative z-50 pointer-events-auto"
                 variants={itemVariants}
               >
                 <Send size={20} />
