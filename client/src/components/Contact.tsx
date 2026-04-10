@@ -223,7 +223,8 @@ Mesaj: ${formData.message}`;
 
               {/* Submit Button */}
               <motion.button
-                type="submit"
+                type="button"
+onClick={handleSubmit}
                 className="metallic-btn w-full flex items-center justify-center gap-2 text-base"
                 variants={itemVariants}
               >
