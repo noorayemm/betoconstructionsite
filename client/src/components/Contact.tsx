@@ -228,7 +228,7 @@ Mesaj: ${formData.message}`;
               {/* Submit Button */}
               <motion.button
                 type="button"
-        onClick={() => alert("çalıştı")}
+        onClick={() => alert("buton çalıştı")}
                 className="metallic-btn w-full flex items-center justify-center gap-2 text-base"
                 variants={itemVariants}
               >
