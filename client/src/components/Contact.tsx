@@ -23,10 +23,14 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+ const handleSubmit = () => {
+  const message = `Ad: ${formData.name}
+Telefon: ${formData.phone}
+Hizmet: ${formData.service}
+Mesaj: ${formData.message}`;
+
+  window.open(`https://wa.me/905079986412?text=${encodeURIComponent(message)}`, "_blank");
+};
 
   const message = `Ad: ${formData.name}
 Telefon: ${formData.phone}
@@ -224,7 +228,7 @@ Mesaj: ${formData.message}`;
               {/* Submit Button */}
               <motion.button
                 type="button"
-onClick={handleSubmit}
+        onClick={handleSubmit}
                 className="metallic-btn w-full flex items-center justify-center gap-2 text-base"
                 variants={itemVariants}
               >
