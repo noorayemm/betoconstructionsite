@@ -229,7 +229,7 @@ Mesaj: ${formData.message}`;
               <motion.button
                 type="button"
         onClick={() => alert("buton çalıştı")}
-                className="metallic-btn w-full relative z-50"
+                className="metallic-btn w-full"
                 variants={itemVariants}
               >
                 <Send size={20} />
