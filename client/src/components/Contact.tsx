@@ -25,7 +25,20 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+   const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const message = `Ad: ${formData.name}
+Telefon: ${formData.phone}
+Hizmet: ${formData.service}
+Mesaj: ${formData.message}`;
+
+  const whatsappURL = `https://wa.me/905079986412?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+
+  setFormData({ name: '', phone: '', service: '', message: '' });
+};
     setFormData({ name: '', phone: '', service: '', message: '' });
   };
 
